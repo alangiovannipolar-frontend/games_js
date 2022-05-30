@@ -6,6 +6,9 @@
   "repository": "git@github.com:alangiovannipolar-frontend/games_js.git",
   "author": "alangiovannipolardev <alangiovannipolardev@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start":"parcel index.html images/*"
+  },
   "devDependencies": {
     "parcel": "^2.6.0"
   }
