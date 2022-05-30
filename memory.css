@@ -1,0 +1,16 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 406px;
+  height: 200px;
+  column-gap: 1px;
+  row-gap: 1px;
+}
+
+.card {
+  width: 100px;
+  background: #000;
+  background-size: contain;
+  background-image: none;
+}
+
