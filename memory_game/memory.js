@@ -19,7 +19,7 @@ const MemoryCardGame = (() => {
      "./images/waterMelon.png",
      "./images/tomato.png",
      "./images/waterMelon.png",
-  ]
+  ].sort(() => 0.5 - Math.random())
   const WIN_NUMBER = cardArray.length/2;
 
   const clean = () => {

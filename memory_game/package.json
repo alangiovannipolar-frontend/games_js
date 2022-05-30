@@ -2,7 +2,7 @@
   "name": "memory_card",
   "version": "1.0.0",
   "description": "memory card game",
-  "main": "app.js",
+  "main": "memory.js",
   "repository": "git@github.com:alangiovannipolar-frontend/games_js.git",
   "author": "alangiovannipolardev <alangiovannipolardev@gmail.com>",
   "license": "MIT",
