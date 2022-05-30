@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 520px;
+  column-gap: 1px;
+  row-gap: 1px;
+}
+
+.card {
+  width: 128px;
+  height: 128px;
+  background-color: #000;
+  background-size:  cover;
+  background-repeat: no-repeat;
+}
+
+.chosen {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
