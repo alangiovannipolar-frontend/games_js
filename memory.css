@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 520px;
-  height: 280px;
   column-gap: 1px;
   row-gap: 1px;
 }

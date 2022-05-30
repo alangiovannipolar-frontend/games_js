@@ -3,6 +3,8 @@ console.log('Start memory js');
 const MemoryCardGame = (() => {
 
   const grid = document.querySelector('.grid');
+  const result = document.querySelector('#result');
+  let countWin = 0
   let cardChosen = [];
   const cardArray = [
      "./images/lemon.png",
@@ -17,22 +19,33 @@ const MemoryCardGame = (() => {
      "./images/waterMelon.png",
      "./images/tomato.png",
      "./images/waterMelon.png",
-    ]
+  ]
+  const WIN_NUMBER = cardArray.length/2;
 
   const clean = () => {
     cardChosen = []
   }
 
+  const reviewWinner = () => {
+   if(countWin===WIN_NUMBER) {
+     result.textContent = "Congratulations you've found all the matches";
+   }
+  }
+
   const reviewMatch = function() {
     console.log("review match")
-    const card1 = cardArray[cardChosen[0]];
-    const card2 = cardArray[cardChosen[1]]
-    if(card1===card2) {
-      document.getElementById(cardChosen[0]).classList.add("chosen");
-      document.getElementById(cardChosen[1]).classList.add("chosen");
+    const cardEl1 =  document.getElementById(cardChosen[0])
+    const cardEl2 =  document.getElementById(cardChosen[1])
+    const card1Image = cardArray[cardChosen[0]];
+    const card2Image = cardArray[cardChosen[1]]
+    if(card1Image===card2Image) {
+      cardEl1.classList.add("chosen");
+      cardEl2.classList.add("chosen");
+      result.textContent = `You has found ${++countWin}`;
+      reviewWinner()
     } else {
-      document.getElementById(cardChosen[0]).style.backgroundImage = "none"
-      document.getElementById(cardChosen[1]).style.backgroundImage = "none"
+      cardEl1.style.backgroundImage = "none"
+      cardEl2.style.backgroundImage = "none"
     }
     clean()
   }
